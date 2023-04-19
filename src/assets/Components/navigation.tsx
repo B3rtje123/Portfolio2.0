@@ -4,7 +4,7 @@ import { useState } from "react";
 export default ( ) => {
     const [navbar, setNavbar] = useState(false);
     return (
-        <nav className="w-full backdrop-blur-md sticky shadow-md z-20 ">
+        <nav className="w-full backdrop-blur-md fixed  shadow-md z-50 ">
             <div className="justify-between px-4 mx-auto lg:max-w-full md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
@@ -60,39 +60,43 @@ export default ( ) => {
                         <ul className="flex list-none flex-col items-center justify-center space-y-8 lg:flex-row md:flex-row md:flex  md:space-x-6 md:space-y-0">
                             <li>
                                 <Link to={'../'} className="text-CustomWhite text-2xl transition-all duration-300 ease-in-out font-light 
+                                md:text-lg
+                                2xl:text-3xl
                                 after:block after:w-0 after:h-0.5 after:bg-red after:transition-all after:duration-300 after:ease-in-out after:origin-left after:transform 
                                 hover:after:w-full
                                 hover:text-yellow
-                                focus:after:w-full focus:text-yellow focus:border-b-2 focus:border-b-red focus:outline-none
-                                active:after:w-full active:text-yellow">
+                                
+                                ">
                                     Home
                                 </Link>
                             </li>
                             <li>
                                 <Link to={'../Hobbys'} className="text-CustomWhite text-2xl transition-all duration-300 ease-in-out font-light 
+                                md:text-lg
+                                2xl:text-3xl
                                 after:block after:w-0 after:h-0.5 after:bg-red after:transition-all after:duration-300 after:ease-in-out after:origin-left after:transform 
                                 hover:after:w-full
-                                hover:text-yellow
-                                focus:after:w-full focus:text-yellow focus:border-b-2 focus:border-b-red focus:outline-none">
+                                hover:text-yellow">
                                     Hobbys
                                 </Link>
                             </li>
                             <li>
                                 <Link to={'../Projects'} className="text-CustomWhite text-2xl transition-all duration-300 ease-in-out font-light 
+                                md:text-lg
+                                2xl:text-3xl
                                 after:block after:w-0 after:h-0.5 after:bg-red after:transition-all after:duration-300 after:ease-in-out after:origin-left after:transform 
                                 hover:after:w-full
-                                hover:text-yellow
-                                focus:after:w-full focus:text-yellow focus:border-b-2 focus:border-b-red focus:outline-none
-                                active:after:w-full active:text-yellow">
+                                hover:text-yellow">
                                     Projects
                                 </Link>
                             </li>
                             <li>
                                 <Link to={'../Contact'} className="text-CustomWhite text-2xl transition-all duration-300 ease-in-out font-light 
+                                md:text-lg
+                                2xl:text-3xl
                                 after:block after:w-0 after:h-0.5 after:bg-red after:transition-all after:duration-300 after:ease-in-out after:origin-left after:transform 
                                 hover:after:w-full
-                                hover:text-yellow
-                                focus:after:w-full focus:text-yellow focus:border-b-2 focus:border-b-red focus:outline-none">
+                                hover:text-yellow">
                                     Contact
                                 </Link>
                             </li>
