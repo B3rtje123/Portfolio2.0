@@ -27,7 +27,7 @@ const router = createBrowserRouter([
   
 export default ( ) => {
     return (
-        <div className="animate-background bg-gradient-to-br from-bg-blue to-bg-pink font-poppins min-h-screen overflow-hidden text-CustomWhite">
+        <div className="motion-safe:animate-background bg-[length:400%] bg-[width:400%] bg-gradient-to-br from-bg-blue to-bg-pink font-poppins min-h-screen overflow-hidden text-CustomWhite">
             <RouterProvider router={router} />
         </div>
     )

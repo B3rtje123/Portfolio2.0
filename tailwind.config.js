@@ -8,10 +8,13 @@ export default {
     extend: {
       keyframes: {
         background:{
-          '0%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-          '100%': { backgroundPosition: '0% 50%' },
+          '0%': { backgroundPosition: '50% 0%' },
+          '50%': { backgroundPosition: '50% 100%' },
+          '100%': { backgroundPosition: '50% 0%' },
         }
+      },
+      animation: {
+        background: 'background 5s ease-in-out infinite',
       },
       colors: {
         'bg-blue': '#26547C',
@@ -29,6 +32,5 @@ export default {
     },
   },
   plugins: [
-    require('tailwindcss-animated')
   ],
 }

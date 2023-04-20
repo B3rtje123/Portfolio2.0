@@ -77,7 +77,7 @@ export default ( ) => {
                                 after:block after:w-0 after:h-0.5 after:bg-red after:transition-all after:duration-300 after:ease-in-out after:origin-left after:transform 
                                 hover:after:w-full
                                 hover:text-yellow">
-                                    Hobbys
+                                    Hobbies
                                 </Link>
                             </li>
                             <li>
