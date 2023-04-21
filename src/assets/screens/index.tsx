@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     {
         path: '/Hobbys',
         element: <Hobbys />,
-    },
+    }, 
     {
         path: '/Projects',
         element: <Projects />,
@@ -22,7 +22,11 @@ const router = createBrowserRouter([
     {
         path: '/Contact',
         element: <Contact />,
-    }  
+    },
+    {
+        path: '*', // 404
+        element: <div />,
+    }
   ])
   
 export default ( ) => {

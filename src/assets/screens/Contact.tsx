@@ -1,7 +1,11 @@
+import Navigation from "../Components/navigation";
+
 export default () => {
     return (
         <main>
-            <h1>Contact</h1>
+            <div>
+                <Navigation />
+            </div>
         </main>
     );
 };

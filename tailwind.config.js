@@ -8,13 +8,16 @@ export default {
     extend: {
       keyframes: {
         background:{
-          '0%': { backgroundPosition: '50% 0%' },
-          '50%': { backgroundPosition: '50% 100%' },
-          '100%': { backgroundPosition: '50% 0%' },
+          '0%, 100%':{
+            'background-position': '0% 0%'
+          },
+          '50%':{
+            'background-position': '100% 100%'
+          }
         }
       },
       animation: {
-        background: 'background 5s ease-in-out infinite',
+        background: 'background 10s ease-in-out infinite',
       },
       colors: {
         'bg-blue': '#26547C',
@@ -22,6 +25,7 @@ export default {
         'red': '#EF476F',
         'yellow': '#FFD166',
         'CustomWhite': '#F1F1F1',
+        'CustomBlack': '#1F1F1F',
       },
       fontFamily: {
         'poppins': ['"Poppins"', 'cursive'],

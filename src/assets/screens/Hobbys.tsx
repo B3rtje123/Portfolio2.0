@@ -1,8 +1,8 @@
 import Navigation from "../Components/navigation";
 
-import foto1 from "../Pictures/bert-2.jpg"
-import foto2 from "../Pictures/52598601_1255832054582000_7755671425641349120_n.jpg"
-import foto3 from "../Pictures/Education-Pic.jpg"
+import foto1 from "../Pictures/287165138_2243820745783121_655215237275275051_n.jpg"
+import foto2 from "../Pictures/Ragnarök-culture-ar1qdh.jpg"
+import foto3 from "../Pictures/gvQ9NhQP8wbbM32jXy4V3j.jpg"
 
 import react from "../Pictures/react.png"
 import html from "../Pictures/html5-logo-best-web-design-psd-html-cms-development-ecommerce-6.png"
@@ -27,8 +27,6 @@ export default () => {
                 md:gap-24
                 2xl:pt-8 relative">
 
-                    <img src={cSharp} alt="" className="absolute top-2 -right-12 w-2/3 opacity-50 rotate-12 xl:-right-64 2xl:-right-96 2xl:-top-72" />
-
                     <div className="w-68 h-44 -skew-x-12  overflow-hidden relative -ml-32 
                     md:h-full
                     xl:-ml-56
@@ -36,21 +34,21 @@ export default () => {
                         <img src={foto1} alt="" className="skew-x-12 ml-8 md:-mt-8 xl:ml-12 2xl:skew-x-0 2xl:ml-0" />
                     </div>
                     <div className="-skew-x-12">
-                        <h1 className="md:text-lg xl:text-2xl 2xl:text-5xl">
-                            Hi,
-                            my name is <span className="text-yellow font-semibold">Bert</span> and I'm a <span className="text-yellow">Full-stack Developer</span> from Belgium. 
-                        </h1>
+                        <h2 className="pb-12 text-lg font-medium md:text-2xl xl:text-4xl 2xl:text-8xl">Motorcycling<span className="font-black text-yellow">.</span></h2>
+                        <p className="pb-2 text-sm md:text-lg xl:text-2xl 2xl:text-5xl">
+                            Riding a motorcycle is my <span className="text-yellow font-medium">PASSION</span>.
+                            It makes me feel free and gives me a sense of <span className="text-yellow font-medium">adventure</span>.
+                        </p >
                     </div>
                 </header>
 
-                <section className="grid grid-cols-2 gap-8 items-center pt-24
+                <section className="grid grid-cols-2 gap-8 items-center pt-24 
                 md:gap-24">
 
                     <div className="z-10">
-                        <h2 className="pb-12 text-lg font-medium md:text-2xl xl:text-4xl 2xl:text-8xl">About me<span className="font-black text-red">.</span></h2>
+                        <h2 className="pb-12 text-lg font-medium md:text-2xl xl:text-4xl 2xl:text-8xl">Gaming<span className="font-black text-yellow">.</span></h2>
                         <p className="pb-2 text-sm md:text-lg xl:text-2xl 2xl:text-5xl">
-                            Hi,
-                            I'm a developer who <span className="text-yellow font-medium">LOVES</span> everything tech.
+                            In other spare time I love to play <span className="text-yellow font-medium">story based games</span> that let you <span className="text-yellow font-medium">immerge</span> in a whole new world.
                         </p >
                     </div>
                     <div className="w-80 h-full skew-x-12 overflow-hidden relative z-10
@@ -58,14 +56,12 @@ export default () => {
                     lg:w-full lg:ml-32
                     xl:ml-56
                     2xl:skew-x-0 2xl:rounded-full 2xl:shadow-2xl">
-                        <img src={foto2} alt="" className="-skew-x-12 scale-110 -ml-16 -mt-16 md:-ml-2 lg:mt-0 lg:-ml-8 2xl:skew-x-0 2xl:ml-0" />
+                        <img src={foto2} alt="" className="-skew-x-12 scale-150 -ml-16 -mt-0 md:-ml-2 lg:mt-0 lg:-ml-8 2xl:skew-x-0 2xl:ml-0" />
                     </div>
                 </section>
 
                 <section className="grid grid-cols-2 gap-8 items-center pt-24 relative 
                 md:gap-24">
-
-                    <img src={react} alt="" className="absolute top-16 -right-20 w-2/3 opacity-50 rotate-12 xl:-right-60 2xl:-right-96" />
 
                     <div className="w-68 h-full -skew-x-12  overflow-hidden relative -ml-32 md:-ml-40 z-10
                     xl:-ml-60
@@ -74,12 +70,12 @@ export default () => {
                     </div>
 
                     <div className="w-full z-10">
-                        <h2 className="pb-4 text-lg font-medium md:text-2xl xl:text-4xl xl:pb-12 2xl:text-8xl">Education<span className="font-black text-red">.</span></h2>
+                        <h2 className="pb-4 text-lg font-medium md:text-2xl xl:text-4xl xl:pb-12 2xl:text-8xl">Photography<span className="font-black text-yellow">.</span></h2>
                         <div className="flex flex-col">
                             <p className="text-sm md:text-lg xl:text-2xl 2xl:text-5xl">
-                                In college I'm studying <span className="text-yellow font-medium">MCT</span> at Howest in Kortrijk.
+                                When I see something <span className="text-yellow font-medium">beautiful</span> I want to <span className="text-yellow font-medium">capture</span> it. Often as quick as possible.
+                                Capturing a moment in time has a lot of <span className="text-yellow font-medium">value</span> to me.
                             </p>
-                            <img src={howest} alt="" className="w-2/4" />
                         </div>
                     </div>
                 </section>

@@ -18,16 +18,16 @@ import mct from "../Pictures/Opleidingslogo_Howest_Multimedia_en_Creative_Techno
 
 export default () => {
     return (
-        <main className="">
+        <main>
             <div>
                 <Navigation />
             </div>
-            <div className="container mx-auto px-8 font-light pt-16 md:px-20 md:pt-20">
+            <div className="max-w-screen-lg flex flex-col align-middle justify-center mx-auto px-8 font-light pt-16 md:px-20 md:pt-20">
                 <header className="grid grid-cols-2 gap-8 items-center 
                 md:gap-24
                 2xl:pt-8 relative">
 
-                    <img src={cSharp} alt="" className="absolute top-2 -right-12 w-2/3 opacity-50 rotate-12 xl:-right-64 2xl:-right-96 2xl:-top-72" />
+                    <img src={cSharp} alt="" className="absolute top-2 -right-12 w-2/3 opacity-50 rotate-12 invisible 2xl:visible xl:-right-64 2xl:-right-96 2xl:-top-72" />
 
                     <div className="w-68 h-44 -skew-x-12  overflow-hidden relative -ml-32 
                     md:h-full
@@ -47,7 +47,7 @@ export default () => {
                 md:gap-24">
 
                     <div className="z-10">
-                        <h2 className="pb-12 text-lg font-medium md:text-2xl xl:text-4xl 2xl:text-8xl">About me<span className="font-black text-red">.</span></h2>
+                        <h2 className="pb-12 text-lg font-medium md:text-2xl xl:text-4xl 2xl:text-8xl">About me<span className="font-black text-yellow">.</span></h2>
                         <p className="pb-2 text-sm md:text-lg xl:text-2xl 2xl:text-5xl">
                             Hi,
                             I'm a developer who <span className="text-yellow font-medium">LOVES</span> everything tech.
@@ -65,7 +65,7 @@ export default () => {
                 <section className="grid grid-cols-2 gap-8 items-center pt-24 relative 
                 md:gap-24">
 
-                    <img src={react} alt="" className="absolute top-16 -right-20 w-2/3 opacity-50 rotate-12 xl:-right-60 2xl:-right-96" />
+                    {/* <img src={react} alt="" className="absolute top-16 -right-20 w-2/3 opacity-50 rotate-12 filter- xl:-right-60 2xl:-right-96" /> */}
 
                     <div className="w-68 h-full -skew-x-12  overflow-hidden relative -ml-32 md:-ml-40 z-10
                     xl:-ml-60
@@ -74,7 +74,7 @@ export default () => {
                     </div>
 
                     <div className="w-full z-10">
-                        <h2 className="pb-4 text-lg font-medium md:text-2xl xl:text-4xl xl:pb-12 2xl:text-8xl">Education<span className="font-black text-red">.</span></h2>
+                        <h2 className="pb-4 text-lg font-medium md:text-2xl xl:text-4xl xl:pb-12 2xl:text-8xl">Education<span className="font-black text-yellow">.</span></h2>
                         <div className="flex flex-col">
                             <p className="text-sm md:text-lg xl:text-2xl 2xl:text-5xl">
                                 In college I'm studying <span className="text-yellow font-medium">MCT</span> at Howest in Kortrijk.
