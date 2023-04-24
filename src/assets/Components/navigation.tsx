@@ -4,7 +4,7 @@ import { useState } from "react";
 export default ( ) => {
     const [navbar, setNavbar] = useState(false);
     return (
-        <nav className="w-full backdrop-blur-md fixed shadow-md z-50 ">
+        <nav className="w-full backdrop-blur-md fixed  z-50 ">
             <div className="justify-between px-4 mx-auto lg:max-w-full md:items-center md:flex md:px-8">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">

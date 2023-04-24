@@ -6,6 +6,7 @@ export default () => {
             <div>
                 <Navigation />
             </div>
+            
         </main>
     );
 };
