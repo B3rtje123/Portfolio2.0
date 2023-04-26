@@ -52,6 +52,8 @@ export default () => {
       }, (error) => {
           console.log(error.text);
       });
+
+
   }
 
   return (
@@ -74,6 +76,7 @@ export default () => {
           <div className='skew-x-12 border-2 border-CustomWhite/50 overflow-hidden px-2 transition-all duration-300 ease-in-out
           hover:border-yellow '>
             <input 
+            value={to_name}
             id='name'
               {...register('name', {required: 'Your name is required!'})}
               placeholder='John Doe' 
@@ -92,6 +95,7 @@ export default () => {
           <div className='border-2 border-CustomWhite/50 -skew-x-12 overflow-hidden px-2
           hover:border-yellow'>
             <input
+            value={from_name}
               {...register('email', {required: 'Your email is required!'})}
               placeholder='johndoe@gmail.com'
               type='email'
@@ -110,6 +114,7 @@ export default () => {
           <div className='skew-x-12 border-2 border-CustomWhite/50 overflow-hidden px-2 transition-all duration-300 ease-in-out
           hover:border-yellow'>
             <textarea maxLength={messageMaxLength}
+              value={Mymessage}
               {...register('message', {required: 'Your message is required!'})}
               placeholder='Your message here...'
               onChange={
@@ -131,24 +136,23 @@ export default () => {
           </div>
 
           
-          <button className={`text-CustomBlack px-5 py-3 mt-8 rounded transition-all duration-300 ease-in-out
-          ${validate() ? 'bg-yellow text-CustomBlack hover:bg-yellow focus:bg-yellow focus:outline-none' : 'bg-red/75 text-CustomWhite hover:bg-red hover:cursor-pointer focus:bg-red'}
-          ${green ? 'bg-green-500 text-CustomBlack hover:bg-green-300' : ''}
-          -skew-x-12 `}
+          <button className={`text-CustomBlack px-5 py-3 mt-8 rounded transition-all duration-300 ease-in-out -skew-x-12 
+          ${green ? 'bg-green-500' : 'bg-green-500'}
+          ${validate() ? 'bg-yellow/75 text-CustomBlack hover:bg-yellow focus:bg-yellow focus:outline-none' : 'bg-red/75 text-CustomWhite hover:bg-red hover:cursor-not-allowed focus:bg-red'}
+          
+          `}
           type="submit" 
           disabled={!validate()}
+          
           onClick={
             () => {
-              if(to_name === '' || from_name === '' || Mymessage === ''){
-                setGreen(false);
-              }else{
-                setGreen(true);
-                setSent(true);
-                submitInfo();
-              }
-            }
-          }
-          >
+              setGreen(true);
+              submitInfo();
+              setTo_name('');
+              setFrom_name('');
+              setMessage('');
+              alert("Thank you for reaching out! \nI'll get back to you as soon as I can!");
+            }}>
             <p className='skew-x-12'>Send</p>
           </button>
         </form>

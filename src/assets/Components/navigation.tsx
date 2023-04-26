@@ -12,7 +12,8 @@ export default ( ) => {
                         <h2 className="
                         text-CustomWhite text-2xl transition-all duration-300 ease-in-out font-light 
                         after:block after:w-0 after:h-0.5 after:bg-red after:transition-all after:duration-300 after:ease-in-out after:origin-left after:transform 
-                        hover:after:w-full hover:text-yellow">
+                        hover:after:w-full hover:text-yellow
+                        focus:after:w-full focus:text-yellow focus:outline-none" tabIndex={0}>
                             Bert Deschrevel<span className="text-yellow font-black">.</span>
                         </h2>
                         </Link>
@@ -63,9 +64,9 @@ export default ( ) => {
                                 md:text-lg
                                 2xl:text-3xl
                                 after:block after:w-0 after:h-0.5 after:bg-red after:transition-all after:duration-300 after:ease-in-out after:origin-left after:transform 
-                                hover:after:w-full
-                                hover:text-yellow
-                                
+                                hover:after:w-full hover:text-yellow
+                                focus:after:w-full focus:text-yellow focus:outline-none
+                                active:after:w-full active:text-yellow active:outline-none
                                 ">
                                     Home
                                 </Link>
@@ -75,8 +76,9 @@ export default ( ) => {
                                 md:text-lg
                                 2xl:text-3xl
                                 after:block after:w-0 after:h-0.5 after:bg-red after:transition-all after:duration-300 after:ease-in-out after:origin-left after:transform 
-                                hover:after:w-full
-                                hover:text-yellow">
+                                hover:after:w-full hover:text-yellow
+                                focus:after:w-full focus:text-yellow focus:outline-none
+                                active:after:w-full active:text-yellow active:outline-none">
                                     Hobbies
                                 </Link>
                             </li>
@@ -85,8 +87,9 @@ export default ( ) => {
                                 md:text-lg
                                 2xl:text-3xl
                                 after:block after:w-0 after:h-0.5 after:bg-red after:transition-all after:duration-300 after:ease-in-out after:origin-left after:transform 
-                                hover:after:w-full
-                                hover:text-yellow">
+                                hover:after:w-full hover:text-yellow
+                                focus:after:w-full focus:text-yellow focus:outline-none
+                                active:after:w-full active:text-yellow active:outline-none">
                                     Projects
                                 </Link>
                             </li>
@@ -95,8 +98,9 @@ export default ( ) => {
                                 md:text-lg
                                 2xl:text-3xl
                                 after:block after:w-0 after:h-0.5 after:bg-red after:transition-all after:duration-300 after:ease-in-out after:origin-left after:transform 
-                                hover:after:w-full
-                                hover:text-yellow">
+                                hover:after:w-full hover:text-yellow
+                                focus:after:w-full focus:text-yellow focus:outline-none
+                                active:after:w-full active:text-yellow active:outline-none">
                                     Contact
                                 </Link>
                             </li>
