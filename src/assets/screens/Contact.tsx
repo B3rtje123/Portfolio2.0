@@ -1,63 +1,158 @@
-import React from "react";
+import emailjs from 'emailjs-com';
+import { useEffect, useState } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
+import Navigation from '../Components/navigation';
 
-const ContactPage = () => {
+import foto from '../Pictures/bert-2.jpg';
+
+import cSharp from '../Pictures/png-clipart-c-programming-language-logo-microsoft-visual-studio-net-framework-javascript-icon-purple-logo.png';
+import html from '../Pictures/html5-logo-best-web-design-psd-html-cms-development-ecommerce-6.png';
+import XD from '../Pictures/XD.png';
+import react from '../Pictures/react.png';
+
+export default () => {
+  const [to_name, setTo_name] = useState('');
+  const [from_name, setFrom_name] = useState('');
+  const [Mymessage, setMessage] = useState('');
+  const [count, setCount] = useState(0);
+  const [green, setGreen] = useState(false);
+  const [sent, setSent] = useState(false);
+
+  const validate = () => {
+    if(to_name.length > 0 && from_name.length > 0 && Mymessage.length > 0){
+      return true;
+    }
+    false
+  }
+
+  const messageMaxLength = 500;
+
+
+  const { register, handleSubmit, watch, formState: { errors } } = useForm({
+    defaultValues: {
+      name: '',
+      email: '',
+      message: ''
+    }
+  });
+
+
+  const submitInfo = () => {
+      console.log(to_name + " " + from_name + " " + Mymessage);
+
+      const emailContent ={
+        to_name: to_name,
+        from_name: from_name,
+        message: Mymessage
+      }
+
+      emailjs.send('service_ccqdf24', 'template_jbuxehk', emailContent, 'VF5BPnSwA0ai3uh6m')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  }
+
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
-      <h1 className="text-3xl font-bold mb-4">Contact Us</h1>
-      <form className="w-full max-w-lg">
-        <div className="mb-4">
-          <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="name"
+    <main className='overflow-hidden max-w-screen max-h-screen'>
+      <Navigation />
+      
+      <div className='max-w-xl w-full mx-auto relative -mt-18 text-CustomWhite'>
+        {/* <img src={react} alt="react_logo" className='absolute max-w-sm -rotate-90 top-0 -right-36 md:max-w-md md:-right-48' />
+        <img src={cSharp} alt="c#_logo" className='absolute max-w-sm -rotate-12 bottom-0 -left-36 md:max-w-md md:-left-20' /> */}
+        <form action=""
+        className='bg-CustomWhite/10 backdrop-blur-md p-12 my-36 shadow-2xl relative'
+        onSubmit={handleSubmit((data) => {
+          console.log(data);
+        })}>
+
+          <h3 className='block text-3xl font-light mb-3'>Want to contact me?</h3>
+          <h4 className='mt-1 mb-4 block text-sm font-normal'>Fill in the form</h4>
+
+          <label htmlFor="name">Name</label>
+          <div className='skew-x-12 border-2 border-CustomWhite/50 overflow-hidden px-2 transition-all duration-300 ease-in-out
+          hover:border-yellow '>
+            <input 
+            id='name'
+              {...register('name', {required: 'Your name is required!'})}
+              placeholder='John Doe' 
+              onChange={
+                (e) => {setTo_name(e.target.value)}
+              }
+              className='-skew-x-12 block w-full p-4 pl-4 text-sm text-CustomWhite rounded-lg bg-transparent 
+              focus:outline-none focus:placeholder-yellow
+              hover:placeholder-yellow
+              placeholder-CustomWhite/75'
+            />
+          </div>
+          <p className='text-red text-xs'>{errors.name?.message}</p>
+
+          <label htmlFor="email">Email</label>
+          <div className='border-2 border-CustomWhite/50 -skew-x-12 overflow-hidden px-2
+          hover:border-yellow'>
+            <input
+              {...register('email', {required: 'Your email is required!'})}
+              placeholder='johndoe@gmail.com'
+              type='email'
+              onChange={
+                (e) => {setFrom_name(e.target.value)}
+              }
+              className='skew-x-12 block w-full p-4 pl-4 text-sm text-CustomWhite rounded-lg bg-transparent 
+              focus:outline-none focus:placeholder-yellow
+              hover:placeholder-yellow
+              placeholder-CustomWhite/75'
+            />
+          </div>
+          <p className='text-red text-xs'>{errors.email?.message}</p>
+
+          <label htmlFor="message">Message</label>
+          <div className='skew-x-12 border-2 border-CustomWhite/50 overflow-hidden px-2 transition-all duration-300 ease-in-out
+          hover:border-yellow'>
+            <textarea maxLength={messageMaxLength}
+              {...register('message', {required: 'Your message is required!'})}
+              placeholder='Your message here...'
+              onChange={
+                (e) => {setCount(e.target.value.length), setMessage(e.target.value)}
+              }
+              className='-skew-x-12 block w-full pt-4 pb-32 text-sm text-CustomWhite rounded-lg bg-transparent 
+              focus:outline-none focus:placeholder-yellow
+              hover:placeholder-yellow
+              placeholder-CustomWhite/75 overflow-y-scroll
+              scrollbar-thin scrollbar-thumb-CustomWhite/75 scrollbar-track-transparent scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-corner-transparent'
+            />
+          </div>  
+          <div className='grid grid-cols-2'>
+            <p className='text-red text-xs'>{errors.message?.message}</p>
+            <div className='text-right'>
+              <span id="current">{count}</span>
+              <span id="maximum">/ {messageMaxLength}</span>
+            </div>
+          </div>
+
+          
+          <button className={`text-CustomBlack px-5 py-3 mt-8 rounded transition-all duration-300 ease-in-out
+          ${validate() ? 'bg-yellow text-CustomBlack hover:bg-yellow focus:bg-yellow focus:outline-none' : 'bg-red/75 text-CustomWhite hover:bg-red hover:cursor-pointer focus:bg-red'}
+          ${green ? 'bg-green-500 text-CustomBlack hover:bg-green-300' : ''}
+          -skew-x-12 `}
+          type="submit" 
+          disabled={!validate()}
+          onClick={
+            () => {
+              if(to_name === '' || from_name === '' || Mymessage === ''){
+                setGreen(false);
+              }else{
+                setGreen(true);
+                setSent(true);
+                submitInfo();
+              }
+            }
+          }
           >
-            Name
-          </label>
-          <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="name"
-            type="text"
-            placeholder="John Doe"
-          />
-        </div>
-        <div className="mb-4">
-          <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="email"
-          >
-            Email
-          </label>
-          <input
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="email"
-            type="email"
-            placeholder="johndoe@example.com"
-          />
-        </div>
-        <div className="mb-4">
-          <label
-            className="block text-gray-700 text-sm font-bold mb-2"
-            htmlFor="message"
-          >
-            Message
-          </label>
-          <textarea
-            className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-            id="message"
-            rows="5"
-            placeholder="Enter your message here"
-          ></textarea>
-        </div>
-        <div className="flex items-center justify-center">
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
-            type="submit"
-          >
-            Submit
+            <p className='skew-x-12'>Send</p>
           </button>
-        </div>
-      </form>
-    </div>
+        </form>
+      </div>
+    </main>
   );
 };
-
-export default ContactPage;

@@ -18,7 +18,7 @@ import mct from "../Pictures/Opleidingslogo_Howest_Multimedia_en_Creative_Techno
 
 export default () => {
     return (
-        <main>
+        <main className="">
             <div>
                 <Navigation />
             </div>

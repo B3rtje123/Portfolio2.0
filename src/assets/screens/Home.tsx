@@ -18,11 +18,11 @@ import mct from "../Pictures/Opleidingslogo_Howest_Multimedia_en_Creative_Techno
 
 export default () => {
     return (
-        <main>
+        <main className="scrollbar">
             <div>
                 <Navigation />
             </div>
-            <div className="max-w-screen-lg flex flex-col align-middle justify-center mx-auto px-8 font-light pt-16 md:px-20 md:pt-20">
+            <div className="max-w-screen-lg flex flex-col align-middle justify-center mx-auto px-8 font-light pt-16 md:px-20 md:pt-20 ">
                 <header className="grid grid-cols-2 gap-8 items-center 
                 md:gap-24
                 2xl:pt-8 relative">
