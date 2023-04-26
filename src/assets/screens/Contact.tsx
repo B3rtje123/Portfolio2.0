@@ -136,7 +136,7 @@ export default () => {
           </div>
 
           
-          <button className={`text-CustomBlack px-5 py-3 mt-8 rounded transition-all duration-300 ease-in-out -skew-x-12 
+          <button className={`text-CustomBlack px-5 py-3 rounded transition-all duration-300 ease-in-out -skew-x-12 
           ${green ? 'bg-green-500' : 'bg-green-500'}
           ${validate() ? 'bg-yellow/75 text-CustomBlack hover:bg-yellow focus:bg-yellow focus:outline-none' : 'bg-red/75 text-CustomWhite hover:bg-red hover:cursor-not-allowed focus:bg-red'}
           
