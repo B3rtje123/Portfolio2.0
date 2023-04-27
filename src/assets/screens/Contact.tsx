@@ -60,7 +60,7 @@ export default () => {
     <main className='overflow-hidden max-w-screen max-h-screen'>
       <Navigation />
       
-      <div className='max-w-xl w-full mx-auto relative -mt-18 text-CustomWhite'>
+      <div className='max-w-xl w-full mx-auto relative -mt-20 md:-mt-16 text-CustomWhite'>
         {/* <img src={react} alt="react_logo" className='absolute max-w-sm -rotate-90 top-0 -right-36 md:max-w-md md:-right-48' />
         <img src={cSharp} alt="c#_logo" className='absolute max-w-sm -rotate-12 bottom-0 -left-36 md:max-w-md md:-left-20' /> */}
         <form action=""
@@ -136,7 +136,7 @@ export default () => {
           </div>
 
           
-          <button className={`text-CustomBlack px-5 py-3 mt-8 rounded transition-all duration-300 ease-in-out -skew-x-12 
+          <button className={`text-CustomBlack px-5 py-3 rounded transition-all duration-300 ease-in-out -skew-x-12 
           ${green ? 'bg-green-500' : 'bg-green-500'}
           ${validate() ? 'bg-yellow/75 text-CustomBlack hover:bg-yellow focus:bg-yellow focus:outline-none' : 'bg-red/75 text-CustomWhite hover:bg-red hover:cursor-not-allowed focus:bg-red'}
           
