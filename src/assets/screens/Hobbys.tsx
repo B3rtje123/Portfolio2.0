@@ -32,7 +32,7 @@ export default () => {
                     <div className="w-68 h-44 -skew-x-12  overflow-hidden relative -ml-32 
                     md:h-full
                     xl:skew-x-0 xl:rounded-full xl:shadow-2xl">
-                        <img src={foto1} alt="" className="skew-x-12 ml-8 md:-mt-8 xl:skew-x-0 xl:ml-0" />
+                        <img src={foto1} alt="" className="skew-x-12 ml-8 md:-mt-8 lg:ml-12 xl:skew-x-0 xl:ml-0" />
                     </div>
                     <div className="-skew-x-12">
                         <h2 className="pb-12 text-lg font-medium md:text-2xl xl:text-4xl 2xl:text-5xl">Motorcycling<span className="font-black text-yellow">.</span></h2>

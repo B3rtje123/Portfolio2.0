@@ -5,6 +5,7 @@ import Projects from "./Projects"
 import Hobbys from "./Hobbys"
 import Contact from "./Contact"
 import Navigation from "../Components/navigation"
+import Error404 from "./Error404"
 
 const router = createBrowserRouter([
     {
@@ -25,7 +26,7 @@ const router = createBrowserRouter([
     },
     {
         path: '*', // 404
-        element: <div />,
+        element: <Error404 />,
     }
   ])
   
