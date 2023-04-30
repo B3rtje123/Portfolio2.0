@@ -48,9 +48,11 @@ export default () => {
                     <div className="z-10">
                         <h2 className="pb-12 text-lg font-medium md:text-2xl xl:text-4xl 2xl:text-5xl">About me<span className="font-black text-yellow">.</span></h2>
                         <p className="pb-2 text-sm md:text-lg xl:text-2xl 2xl:text-3xl">
-                            Hi,
-                            I'm a developer who <span className="text-yellow font-medium">LOVES</span> everything tech.
+                            A full-stack developer in training. I'm currently studying <span className="text-yellow font-medium">MCT</span> at Howest in Kortrijk.
                         </p >
+                        <p className="pb-2 text-sm md:text-lg xl:text-2xl 2xl:text-3xl">
+                            Next to coding I love spending time with my friends and family.😊
+                        </p>
                     </div>
                     <div className="w-80 h-full skew-x-12 overflow-hidden relative z-10
                     md:ml-12
