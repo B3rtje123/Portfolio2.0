@@ -34,7 +34,7 @@ export default () => {
                     xl:skew-x-0 xl:rounded-full xl:shadow-2xl">
                         <img src={foto1} alt="" className="skew-x-12 ml-8 md:-mt-8 xl:skew-x-0 xl:ml-0" />
                     </div>
-                    <div className="-skew-x-12">
+                    <div className="-skew-x-12 xl:skew-x-0">
                         <h1 className="md:text-lg xl:text-2xl 2xl:text-3xl">
                             Hi,
                             my name is <span className="text-yellow font-semibold">Bert</span> and I'm a <span className="text-yellow">Full-stack Developer</span> from Belgium. 
@@ -70,7 +70,7 @@ export default () => {
                         <img src={foto3} alt="" className="-scale-x-100 skew-x-12 ml-20 xl:skew-x-0 xl:ml-16 xl:scale-150 xl:-scale-x-150" />
                     </div>
 
-                    <div className="w-full z-10">
+                    <div className="w-full -skew-x-12 z-10 xl:skew-x-0">
                         <h2 className="pb-4 text-lg font-medium md:text-2xl xl:text-4xl xl:pb-12 2xl:text-5xl">Education<span className="font-black text-yellow">.</span></h2>
                         <div className="flex flex-col">
                             <p className="text-sm md:text-lg xl:text-2xl 2xl:text-3xl">

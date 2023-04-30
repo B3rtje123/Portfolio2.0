@@ -34,7 +34,7 @@ export default () => {
                     xl:skew-x-0 xl:rounded-full xl:shadow-2xl">
                         <img src={foto1} alt="" className="skew-x-12 ml-8 md:-mt-8 lg:ml-12 xl:skew-x-0 xl:ml-0" />
                     </div>
-                    <div className="-skew-x-12">
+                    <div className="-skew-x-12 xl:skew-x-0">
                         <h2 className="pb-12 text-lg font-medium md:text-2xl xl:text-4xl 2xl:text-5xl">Motorcycling<span className="font-black text-yellow">.</span></h2>
                         <p className="pb-2 text-sm md:text-lg xl:text-2xl 2xl:text-3xl">
                             Riding a motorcycle is my <span className="text-yellow font-medium">PASSION</span>.
@@ -70,12 +70,12 @@ export default () => {
                         <img src={foto3} alt="" className="-scale-x-100 skew-x-12 ml-20 xl:skew-x-0 xl:ml-16 xl:scale-150 xl:-scale-x-150" />
                     </div>
 
-                    <div className="w-full z-10">
+                    <div className="w-full z-10 -skew-x-12 xl:skew-x-0">
                         <h2 className="pb-4 text-lg font-medium md:text-2xl xl:text-4xl xl:pb-12 2xl:text-5xl">Photography<span className="font-black text-yellow">.</span></h2>
                         <div className="flex flex-col">
                             <p className="text-sm md:text-lg xl:text-2xl 2xl:text-3xl">
                                 When I see something <span className="text-yellow font-medium">beautiful</span> I want to <span className="text-yellow font-medium">capture</span> it. Often as quick as possible.
-    //                          Capturing a moment in time has a lot of <span className="text-yellow font-medium">value</span> to me.
+                                Capturing a moment in time has a lot of <span className="text-yellow font-medium">value</span> to me.
                             </p>
                         </div>
                     </div>
