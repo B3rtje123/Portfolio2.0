@@ -21,7 +21,7 @@ export default ( ) => {
                         <div className="md:hidden">
                             <button
                                 className="p-2 text-CustomWhite rounded-md outline-none transition-all duration-300 ease-in-out"
-                                onClick={() => setNavbar(!navbar)}
+                                onClick={() => {setNavbar(!navbar)}}
                             >
                                 {navbar ? (
                                     <svg

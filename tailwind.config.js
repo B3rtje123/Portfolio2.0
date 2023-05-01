@@ -22,7 +22,7 @@ export default {
       colors: {
         'bg-blue': '#26547C',
         'bg-pink': '#DD83B2',
-        'red': '#EF476F',
+        'red': '#FFD166',
         'yellow': '#FFD166',
         'CustomWhite': '#F1F1F1',
         'CustomBlack': '#1F1F1F',
